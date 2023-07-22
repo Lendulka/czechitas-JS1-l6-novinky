@@ -11,9 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   min-height: 100vh;
-
   color: #444;
 }
 
@@ -30,7 +28,7 @@ body {
 
 .post {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   margin-bottom: 2rem;
   padding-left: 1rem;
   border-left: 0.25rem solid transparent;
@@ -41,18 +39,34 @@ body {
 }
 
 .post__picture {
-  width: 15rem;
+  width: 450px;
   height: auto;
-}
-
-.post__body {
-  margin-left: 2rem;
+  max-width: 100%;
 }
 
 .post__title {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .post__brief {
   line-height: 150%;
+}
+
+@media screen and (min-width: 820px) {
+  .post {
+    flex-direction: row;
+  }
+
+  .post__body {
+    margin-left: 2rem;
+  }
+
+  .post__picture {
+    width: 320px;
+    height: 187px;
+  }
+
+  .post__title {
+    margin-top: 0;
+  }
 }
